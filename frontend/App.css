@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding:0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+.highlight {
+  color: #FFAE3E;
+}
+.highlight2 {
+  color: rgb(6, 6, 130);
+}
+
+section {
+  scroll-margin-top: 100px; /* Offset matches the sticky navbar height */
+  padding-inline: 2rem;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10rem;
+  max-width: 1200px;
+}
+
+h2 {
+  /* font-size: 2rem; */
+  margin-bottom: 1rem;
+}
+
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+
+
+@media (max-width: 768px) {
+  section{
+    margin-bottom:5rem;
+  }
+}
