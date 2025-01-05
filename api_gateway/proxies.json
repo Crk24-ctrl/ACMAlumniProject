@@ -1,9 +1,0 @@
-[
-    {
-        "name": "auth",
-        "protocol": "http",
-        "context": "/api/auth",
-        "port": "3000",
-        "host": "localhost"
-    }
-]
