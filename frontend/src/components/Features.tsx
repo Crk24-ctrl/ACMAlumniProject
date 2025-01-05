@@ -2,7 +2,7 @@ import "../styles/features.css";
 const Features: React.FC = () => {
   return (
     <section id="features" className="features" >
-      <h2>How Does <span className="highlight">Deal</span><span className="highlight2">Finder </span>work?</h2>
+      <h2>How does <span className="highlight">Deal</span><span className="highlight2">Finder </span>work?</h2>
 
       <div className="features-container">
         <div className="feature">
