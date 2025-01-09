@@ -1,0 +1,93 @@
+.login {
+    color: rgb(1, 0, 0); 
+    width:100vw; 
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url('/dealsss.png');
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+    margin: 0;
+    padding: 40px; 
+    flex-direction: column; 
+  
+  
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+.login-button {
+    background-color: rgb(6, 6, 130);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+.login-button:hover {
+    background-color: #FFAE3E;
+  }
+  
+.forgot-password {
+    display: block;
+    margin-top: 1rem;
+    color: rgb(6, 6, 130);
+    text-decoration: none;
+  }
+  
+.forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+.create-account {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    color: rgb(6, 6, 130);
+    border: 1px solid rgb(6, 6, 130);
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .create-account:hover{
+    background-color: #FFAE3E;
+    color: #fff;
+  }
+  
+  .highlight {
+    color: #FFAE3E;
+  }
+  .highlight2 {
+    color: rgb(6, 6, 130);
+  }
+
+  .login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
