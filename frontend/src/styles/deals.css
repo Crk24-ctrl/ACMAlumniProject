@@ -1,18 +1,331 @@
 .deals {
-    color: rgb(1, 0, 0); 
-    width:100vw; 
-    height: 100vh;
-    min-width: 100vw;
-    background-image: url('/dealsss.png');
-    background-size: cover; 
-    background-position: center;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    position: relative; 
-    margin: 0;
-    padding: 40px; 
-    flex-direction: column; 
-  
+  color: rgb(1, 0, 0);
+  width: 100vw;
+  min-height: 100vh; 
+  background-image: url('/dealsss.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  margin: 0;
+  align-items: flex-start;
+  overflow-x: hidden; 
+}
+
+.filters {
+  width: 25%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #FFAE3E;
+  min-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.filters label {
+  font-weight: bold;
+  color: #333;
+}
+.products {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px;
+}
+
+
+
+.product {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  max-width: 450px;
+  max-height: 650px;
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.product h2 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.product a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.product a:hover {
+  background-color: #FFAE3E;
+}
+
+/* Filters Section */
+.filters .search input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  color: rgb(6, 6, 130);
+  background-color:white;
+}
+
+
+
+.price-range label {
+  font-weight: bold;
+}
+
+.price-range input[type="range"] {
+  width: 100%;
+}
+
+.categories label {
+  display: block;
+  margin: 5px 0;
+}
+
+.subcategory {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 15px;
+  border-left: 2px solid #ccc;
+  padding-left: 10px;
+}
+
+.subcategory label {
+  display: inline-block;
+  margin: 0;
+  padding: 5px;
+  background-color: #fffcfc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease
+}
+.subcategory label:hover {
+  background-color: #ffe4c4; 
+}
+
+
+.sort {
+  margin-top: 20px;
+}
+
+.sort label {
+  font-weight: bold;
+}
+
+.sort select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .deals {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
   }
+
+  .deals-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .products {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+  }
+  
+
+  .filters {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+
+
+  .product {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .product img {
+    max-width: 100%;
+    height: auto; 
+  }
+
+  .product h2 {
+    font-size: 14px;
+  }
+
+  .product p {
+    font-size: 12px;
+  }
+
+  .pagination {
+    gap: 5px;
+  }
+
+  .pagination button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+.subcategory {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 15px;
+  border-left: 2px solid #ccc;
+  padding-left: 10px;
+}
+
+.subcategory label {
+  display: inline-block;
+  margin: 0;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.subcategory input {
+  margin-right: 5px;
+}
+.pagination {
+  display: flex; /* Ensures buttons are laid out in a row */
+  flex-direction: row; /* Explicitly sets the layout direction to horizontal */
+  justify-content: center; /* Centers the buttons horizontally */
+  align-items: center; /* Aligns buttons vertically within the row */
+  margin-top: 20px; /* Adds space between pagination and other content */
+  gap: 10px; /* Adds space between buttons */
+}
+
+.pagination button {
+  padding: 10px 15px; /* Makes the buttons visually larger */
+  border: 1px solid #ccc; /* Adds a border */
+  border-radius: 5px; /* Slightly rounds the corners */
+  background-color: #f4f4f4; /* Neutral background */
+  cursor: pointer; /* Shows pointer on hover */
+}
+
+.pagination button:hover {
+  background-color: #FFAE3E; /* Highlights button on hover */
+  color: white;
+}
+
+.pagination button.active {
+  background-color: #FFAE3E; /* Highlights active button */
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Pagination styling inside the footer */
+.footer .pagination {
+  display: flex;
+  justify-content: center; /* Centers the pagination horizontally */
+  align-items: center;
+  gap: 10px; /* Adds spacing between buttons */
+}
+
+/* Wrapper to make the footer sticky */
+.deals {
+  display: flex;
+  flex-direction: column; /* Allows stacking content vertically */
+  min-height: 100vh; /* Ensures the page takes at least the full viewport height */
+}
+
+.deals-container {
+  flex: 1; /* This pushes the footer down */
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.footer {
+  position: relative; /* Allow it to flow with content */
+  background-color: #120078; /* Footer styling */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%; /* Ensures it spans the page width */
+  margin-top: 20px; /* Adds space between content and footer */
+}
+
+
+.pagination button.active {
+  background-color: #ffae3e;
+  color: #fff;
+  font-weight: bold;
+}
+
+.pagination button:disabled {
+  background-color: #f2f2f2;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+
+/* Pagination Styles */
+.pagination {
+  display: flex; /* Flex layout for the pagination */
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line on small screens */
+  justify-content: center; /* Center the pagination buttons horizontally */
+  gap: 8px; /* Smaller gap between buttons */
+  margin-top: 20px; /* Adds space above the pagination */
+}
+
+.pagination button {
+  padding: 8px 12px; /* Adjust the button size to be smaller */
+  font-size: 14px; /* Ensure the text is legible on mobile */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f4f4f4; /* Neutral background */
+  cursor: pointer; /* Pointer on hover */
+  min-width: 40px; /* Minimum width for buttons */
+}
+
+.pagination button:hover {
+  background-color: #FFAE3E; 
+  color: white;
+}
+
+.pagination button.active {
+  background-color: #FFAE3E; 
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .pagination button {
+    font-size: 12px; /* Smaller text size on mobile */
+    padding: 6px 10px; /* Adjust button padding */
+    min-width: 30px; /* Minimum width for the button */
+  }
+}
+
